@@ -22,11 +22,12 @@ img {
 }
 
 p {
-    padding: 10px;
+    padding: 0px;
 }
 
 main {
     max-width: 840px;
+
 }
 
 aside {
@@ -48,11 +49,9 @@ aside img {
 main img {
     width: 150px;
     height: auto;
-
-}
-
-p {
+    border: 1px;
     padding: 0;
+    box-shadow: 0 0 30px gray;
 
 }
 
