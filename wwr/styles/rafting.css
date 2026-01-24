@@ -3,13 +3,9 @@
 =========================== */
 :root {
     --primary-color: #055a05;
-    /* forest green */
     --secondary-color: #f4f4f4;
-    /* light background for overlays */
     --accent1-color: #264653;
-    /* dark slate blue */
     --accent2-color: #e9c46a;
-    /* golden yellow */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -37,7 +33,7 @@ body {
 =========================== */
 header {
     background-color: var(--secondary-color);
-    color: var(--accent2-color);
+    color: var(--accent1-color);
     width: 840px;
     margin: 0 auto;
     display: flex;
@@ -53,7 +49,7 @@ header img {
 header nav a {
     text-decoration: none;
     color: var(--accent1-color);
-    margin-left: 16px;
+    margin-left: 12px;
     font-weight: bold;
 }
 
@@ -70,8 +66,7 @@ main {
 =========================== */
 .hero {
     position: relative;
-    min-height: 400px;
-    /* ensures space for hero */
+    /* ensures overlays position correctly */
     margin-bottom: 60px;
 }
 
@@ -81,7 +76,7 @@ main {
     height: auto;
 }
 
-/* Hero H1 overlay */
+/* Hero H1 (overlay) */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -89,7 +84,7 @@ main {
     padding: 16px;
     text-align: center;
     background-color: var(--accent2-color);
-    color: #fff;
+    color: white;
     opacity: 0.7;
     z-index: 2;
     font-family: var(--heading-font);
@@ -100,15 +95,12 @@ main {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     width: 60%;
     z-index: 1;
-    font-family: var(--body-font);
-    color: var(--accent1-color);
 }
 
-/* Image inside article */
 .hero article img {
     float: right;
     width: 125px;
@@ -119,7 +111,7 @@ main {
    Sections
 =========================== */
 section {
-    margin: 16px;
+    margin: 24px 16px;
     padding: 8px;
 }
 
@@ -128,14 +120,13 @@ h2 {
     color: var(--primary-color);
     text-align: center;
     background: none;
-    /* no background on section headings */
 }
 
 /* ===========================
    Paragraphs
 =========================== */
 p {
-    margin: 16px 0;
+    margin: 12px 0;
     line-height: 1.6;
 }
 
@@ -146,7 +137,7 @@ footer {
     width: 840px;
     margin: 0 auto;
     text-align: center;
-    padding: 16px 0;
+    padding: 20px 0;
 }
 
 .socialmedia a {
