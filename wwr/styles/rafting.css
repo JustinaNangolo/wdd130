@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 /* ===========================
@@ -39,7 +40,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 16px;
 }
 
 header img {
@@ -51,6 +51,11 @@ header nav a {
     color: var(--accent1-color);
     margin-left: 12px;
     font-weight: bold;
+    text-align: left;
+}
+
+header nav {
+    text-align: left;
 }
 
 /* ===========================
@@ -79,11 +84,13 @@ main {
 /* Hero H1 (overlay) */
 .hero h1 {
     position: absolute;
-    top: 20px;
-    width: 100%;
+    top: 10px;
+    width: auto;
+    left: 20px;
+    right: 20px;
     padding: 16px;
     text-align: center;
-    background-color: var(--accent2-color);
+    background-color: var(--accent1-color);
     color: white;
     opacity: 0.7;
     z-index: 2;
@@ -95,9 +102,10 @@ main {
     position: absolute;
     bottom: 20px;
     left: 20px;
+    right: 20px;
+    width: auto;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
-    width: 60%;
     z-index: 1;
 }
 
@@ -117,9 +125,9 @@ section {
 
 h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: white;
     text-align: center;
-    background: none;
+    background-color: var(--accent1-color);
 }
 
 /* ===========================
@@ -136,7 +144,7 @@ p {
 footer {
     width: 840px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     padding: 20px 0;
 }
 
