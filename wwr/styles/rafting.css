@@ -56,6 +56,8 @@ header nav a {
 
 header nav {
     text-align: left;
+    display: flex;
+    gap: 16px;
 }
 
 /* ===========================
