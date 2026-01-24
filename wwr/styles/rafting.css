@@ -48,7 +48,7 @@ header img {
 
 header nav a {
     text-decoration: none;
-    color: var(--accent1-color);
+    color: var(--primary-color);
     margin-left: 12px;
     font-weight: bold;
     text-align: left;
@@ -146,6 +146,7 @@ footer {
     margin: 0 auto;
     text-align: left;
     padding: 20px 0;
+    color: var(--accent2-color);
 }
 
 .socialmedia a {
