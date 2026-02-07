@@ -234,6 +234,10 @@ footer {
 }
 
 /* Company Address Header */
+/* Company Address Header */
+/* Company Address Header */
+/* Company Address Header */
+/* Company Address Header */
 .company-address {
     text-align: center;
     margin: 20px 0;
@@ -290,12 +294,15 @@ form {
 }
 
 /* Update this selector to include style and color */
-.form-item input {
+.form-item input,
+.form-item textarea {
     flex: 2;
-    /* Remove width: 70% here so flexbox can calculate the space correctly */
     padding: 10px;
     border: 1px solid var(--accent1-color);
+    /* This MUST have 'solid' to be visible */
     background-color: var(--white);
+    width: 100%;
+    /* Ensures they fill the space next to the label */
 }
 
 /* Ensure textarea has a decent starting height */
@@ -351,9 +358,9 @@ fieldset {
     /* Horizontal alignment for the main container */
     align-items: flex-start;
     gap: 20px;
-    border: none;
+    border: 1px solid var(--accent1-color);
     margin: 20px 0;
-    padding: 0;
+    padding: 15px;
 }
 
 /* Specific styling for labels inside the fieldset to prevent stretching */
@@ -390,4 +397,16 @@ input[type="radio"] {
     align-items: center;
     gap: 10px;
     font-weight: normal;
+}
+
+button[type="submit"] {
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--accent1-color);
+    /* Match the other form borders */
+    color: var(--accent1-color);
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    /* Makes it span the bottom of the form */
 }
