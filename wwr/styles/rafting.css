@@ -122,7 +122,7 @@ main {
     left: 20px;
     right: 20px;
     width: auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--hero-bg);
     padding: 16px;
     z-index: 1;
 }
