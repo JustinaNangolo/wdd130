@@ -154,11 +154,15 @@ fieldset {
     gap: 20px;
     border: 1px solid var(--accent1-color);
     padding: 15px;
+    margin: 20px 0;
 }
 
 legend {
     font-weight: bold;
     padding: 0 5px;
+    flex: 0 0 100px;
+    font-weight: bold;
+    padding: 0;
 }
 
 .radio-group {
