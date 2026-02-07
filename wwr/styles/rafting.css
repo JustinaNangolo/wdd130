@@ -167,13 +167,20 @@ footer {
 
 .socialmedia a {
     text-decoration: none;
+    display: flex;
+}
+
+.socialmedia {
+    display: flex;
+    /* This makes the links sit side-by-side */
+    gap: 12px;
+    /* This creates space between the icons */
 }
 
 .socialmedia img {
     width: 40px;
     height: auto;
-    margin: 0 6px;
-    display: flex;
+    display: block;
     gap: 12px;
 }
 
