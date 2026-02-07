@@ -53,15 +53,23 @@
 
                     <fieldset>
                         <legend>Message Purpose</legend>
-                        <label><input type="radio" id="general" name="purpose" value="general">
-                            General Inquiry</label>
-                        <label><input type="radio" id="reservation" name="purpose"
-                              value="reservation"> Reservation
-                            Question</label>
-                        <label><input type="radio" id="suggestion" name="purpose"
-                              value="suggestion"> Website
-                            Suggestion</label>
+                        <div class="radio-group">
+                            <label><input type="radio" id="general" name="purpose" value="general">
+                                General
+                                Inquiry</label>
+                            <label><input type="radio" id="reservation" name="purpose"
+                                  value="reservation"> Reservation
+                                Question</label>
+                            <label><input type="radio" id="suggestion" name="purpose"
+                                  value="suggestion"> Website
+                                Suggestion</label>
+                        </div>
                     </fieldset>
+
+                    <div class="form-item">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Type here"></textarea>
+                    </div>
 
                     <label class="newsletter">
                         <input type="checkbox" id="subscribe" name="subscribe"> Please Subscribe me
