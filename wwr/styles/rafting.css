@@ -9,6 +9,7 @@
     --white: #ffffff;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
+    --gray-placeholder: #dddddd;
 }
 
 /* ===========================
@@ -262,6 +263,12 @@ form {
     gap: 15px;
 }
 
+.form-item:has(textarea) {
+    flex-direction: column;
+    /* Force vertical stack */
+    align-items: flex-start;
+}
+
 .form-item label {
     flex: 1;
     /* Takes up 30% roughly */
@@ -273,6 +280,13 @@ form {
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 15px;
+}
+
+.form-item textarea {
+    width: 100%;
+    /* Spans the full width of the form area */
+    margin-top: 8px;
+    border: 1px solid var(--accent1-color);
 }
 
 /* Update this selector to include style and color */
@@ -309,7 +323,7 @@ textarea {
 .employee-grid img {
     width: 150px;
     height: 150px;
-    background-color: #ddd;
+    background-color: var(--gray-placeholder);
     /* Placeholder look */
     border-radius: 50%;
     /* Circular images if you prefer */
@@ -326,21 +340,23 @@ button[type="submit"] {
 
 /* Style the legend (The title of the radio buttons) */
 legend {
-    padding: 0 10px;
+    flex: 1;
+    max-width: 100px;
+    /* Aligns with Name and Email labels */
     font-weight: bold;
-    color: var(--accent1-color);
+    padding: 0;
 }
 
 /* Ensure the fieldset takes up full width and stacks its internal items */
 fieldset {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* Horizontal alignment for the main container */
     align-items: flex-start;
-    /* Aligns circles to the left */
-    gap: 12px;
+    gap: 20px;
+    border: none;
     margin: 20px 0;
-    padding: 15px;
-    border: 1px solid var(--accent1-color);
+    padding: 0;
 }
 
 /* Specific styling for labels inside the fieldset to prevent stretching */
@@ -362,4 +378,19 @@ input[type="radio"] {
     margin: 0;
     flex-shrink: 0;
     /* Prevents the circle from squashing */
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    /* Stacks the three options vertically */
+    gap: 10px;
+    flex: 2;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
 }
