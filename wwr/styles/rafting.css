@@ -275,13 +275,21 @@ form {
     margin-bottom: 15px;
 }
 
+/* Update this selector to include style and color */
 .form-item input,
 .form-item textarea {
     flex: 2;
     width: 70%;
-    /* Adjusts the size of the inputs relative to labels */
     padding: 10px;
-    border: 1px;
+    border: 1px solid var(--accent1-color);
+    /* Added 'solid' and the color variable */
+    background-color: var(--white);
+    /* Ensure background is clean */
+}
+
+/* Ensure textarea has a decent starting height */
+textarea {
+    min-height: 100px;
 }
 
 /* Employee Section Styling */
