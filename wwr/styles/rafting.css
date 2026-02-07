@@ -410,3 +410,21 @@ button[type="submit"] {
     width: 100%;
     /* Makes it span the bottom of the form */
 }
+
+/* Update this section in your rafting.css */
+.employees {
+    border: 1px solid var(--accent1-color);
+    /* Adds the full box border */
+    margin-top: 40px;
+    padding: 20px;
+    /* Space inside the border */
+    text-align: center;
+}
+
+/* Ensure the H2 inside doesn't have its own background color 
+   if you want it to look exactly like the wireframe */
+.employees h2 {
+    background-color: transparent;
+    color: var(--accent1-color);
+    margin-bottom: 20px;
+}
