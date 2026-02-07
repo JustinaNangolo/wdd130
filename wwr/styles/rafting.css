@@ -7,389 +7,164 @@
     --accent1-color: #264653;
     --accent2-color: #000000;
     --white: #ffffff;
+    --gray-placeholder: #dddddd;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
-    --gray-placeholder: #dddddd;
 }
 
 /* ===========================
-   Reset default browser styles
+   Reset & Base Styles
 =========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-/* ===========================
-   Body styles
-=========================== */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     background-color: var(--white);
 }
 
+/* Consolidated Site Width - FIXES REPEATED DECLARATION */
+.header,
+main,
+footer {
+    max-width: 840px;
+    width: 95%;
+    /* Responsive width for mobile */
+    margin: 0 auto;
+}
+
 /* ===========================
-   Header styles
+   Header & Nav
 =========================== */
 header {
     background-color: var(--secondary-color);
     color: var(--accent1-color);
-    margin: 0 auto;
     padding: 10px 16px;
     display: grid;
     grid-template-columns: 200px 1fr;
     align-items: center;
-
 }
 
 header img {
     display: block;
     max-height: 80px;
-    margin-bottom: 10px;
-}
-
-header nav a {
-    text-decoration: none;
-    color: var(--primary-color);
-    margin-left: 12px;
-    font-weight: bold;
-    text-align: left;
 }
 
 header nav {
-    text-align: left;
-    flex-direction: row;
-    align-items: flex-start;
     display: flex;
     gap: 20px;
     justify-content: flex-end;
 }
 
-.header,
-main,
-footer {
-    width: 840px;
-    max-width: 840px;
-    margin: 0 auto;
+header nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 /* ===========================
-   Main layout
+   Sections & Headings
 =========================== */
-main {
-    margin: 0 auto;
-}
-
-/* ===========================
-   Hero Section
-=========================== */
-.hero {
-    position: relative;
-    /* ensures overlays position correctly */
-    margin-bottom: 60px;
-}
-
-.hero > img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* Hero H1 (overlay) */
-.hero h1 {
-    position: absolute;
-    top: 10px;
-    width: auto;
-    left: 20px;
-    right: 20px;
-    padding: 16px;
-    text-align: center;
-    background-color: var(--accent1-color);
-    color: var(--white);
-    opacity: 0.7;
-    z-index: 2;
+h1,
+h2 {
     font-family: var(--heading-font);
-}
-
-/* Hero article overlay */
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    width: auto;
-    background-color: var(--white);
-    padding: 16px;
-    z-index: 1;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 12px;
-}
-
-/* ===========================
-   Sections
-=========================== */
-section {
-    margin: 24px 16px;
-    padding: 8px;
 }
 
 h2 {
-    font-family: var(--heading-font);
     color: var(--white);
     text-align: center;
     background-color: var(--accent1-color);
+    padding: 8px;
 }
 
-/* ===========================
-   Paragraphs
-=========================== */
 p {
     margin: 12px 0;
     line-height: 1.6;
 }
 
 /* ===========================
-   Footer & Social Media
+   Contact Page Layout
 =========================== */
-footer {
-    display: flex;
-    margin: 0 auto;
-    text-align: left;
-    padding: 20px 0;
-    color: var(--accent2-color);
-    align-items: center;
-    justify-content: space-between;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 12px;
-    /* This creates space between the icons */
-}
-
-.socialmedia img {
-    width: 40px;
-    height: auto;
-    display: block;
-}
-
-.history {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    align-items: center;
-
-}
-
-.history img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.history h2 {
-    grid-column: 1 /-1;
-    margin-bottom: 12px;
-
-}
-
-.adventures {
-    margin: 32px 16px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    align-items: start;
-    text-align: center;
-}
-
-.adventures figure {
-    margin: 0;
-    /* Removes default browser margins on figures */
-}
-
-.adventures h2 {
-    grid-column: 1 /-1;
-}
-
-.adventures img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.adventures figcaption {
-    font-size: 0.9rem;
-    margin-top: 6px;
-}
-
-/* Company Address Header */
-/* Company Address Header */
-/* Company Address Header */
-/* Company Address Header */
-/* Company Address Header */
 .company-address {
     text-align: center;
     margin: 20px 0;
 }
 
-/* Side-by-Side Grid for Map and Form */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
     gap: 30px;
     margin: 20px 0;
 }
 
 .map iframe {
     width: 100%;
-    height: 50%;
-    /* Makes map match the height of the form */
-    min-height: 400px;
+    height: 450px;
     border: none;
 }
 
-/* Form Layout */
+/* Consolidated Form Styles - FIXES REPEATED RULES */
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.form-item:has(textarea) {
-    flex-direction: column;
-    /* Force vertical stack */
-    align-items: flex-start;
-}
-
-.form-item label {
-    flex: 1;
-    /* Takes up 30% roughly */
-    max-width: 100px;
-}
-
 .form-item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 15px;
 }
 
-.form-item textarea {
-    width: 100%;
-    /* Spans the full width of the form area */
-    margin-top: 8px;
-    border: 1px solid var(--accent1-color);
+.form-item label {
+    flex: 1;
+    max-width: 100px;
+    font-weight: bold;
 }
 
-/* Update this selector to include style and color */
 .form-item input,
 .form-item textarea {
     flex: 2;
     padding: 10px;
     border: 1px solid var(--accent1-color);
-    /* This MUST have 'solid' to be visible */
     background-color: var(--white);
+}
+
+/* Textarea Layout Fix: Stacked below label */
+.form-item:has(textarea) {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-item textarea {
     width: 100%;
-    /* Ensures they fill the space next to the label */
+    margin-top: 8px;
+    min-height: 150px;
 }
 
-/* Ensure textarea has a decent starting height */
-textarea {
-    min-height: 100px;
-}
-
-/* Employee Section Styling */
-.employees {
-    border-top: 2px solid var(--accent1-color);
-    margin-top: 40px;
-    padding-top: 20px;
-    text-align: center;
-}
-
-.employee-grid {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.employee-grid img {
-    width: 150px;
-    height: 150px;
-    background-color: var(--gray-placeholder);
-    /* Placeholder look */
-    border-radius: 50%;
-    /* Circular images if you prefer */
-}
-
-/* Button Styling */
-button[type="submit"] {
-    padding: 10px;
-    background-color: var(--secondary-color);
-    border: 1px solid #777;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* Style the legend (The title of the radio buttons) */
-legend {
-    flex: 1;
-    max-width: 100px;
-    /* Aligns with Name and Email labels */
-    font-weight: bold;
-    padding: 0;
-}
-
-/* Ensure the fieldset takes up full width and stacks its internal items */
+/* Message Purpose Section */
 fieldset {
     display: flex;
     flex-direction: row;
-    /* Horizontal alignment for the main container */
     align-items: flex-start;
     gap: 20px;
     border: 1px solid var(--accent1-color);
-    margin: 20px 0;
     padding: 15px;
 }
 
-/* Specific styling for labels inside the fieldset to prevent stretching */
-fieldset label {
-    display: flex;
-    flex-direction: row;
-    /* Circles next to text */
-    align-items: center;
-    width: auto;
-    /* Prevents label from filling the whole width */
-    font-weight: normal;
-    gap: 10px;
-}
-
-/* Ensure radio buttons don't shrink or overlap */
-input[type="radio"] {
-    width: 1.2rem;
-    height: 1.2rem;
-    margin: 0;
-    flex-shrink: 0;
-    /* Prevents the circle from squashing */
+legend {
+    font-weight: bold;
+    padding: 0 5px;
 }
 
 .radio-group {
     display: flex;
     flex-direction: column;
-    /* Stacks the three options vertically */
     gap: 10px;
-    flex: 2;
 }
 
 .radio-group label {
@@ -399,32 +174,71 @@ input[type="radio"] {
     font-weight: normal;
 }
 
+/* Newsletter Checkbox */
+.newsletter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 button[type="submit"] {
     padding: 15px;
     background-color: var(--secondary-color);
     border: 1px solid var(--accent1-color);
-    /* Match the other form borders */
-    color: var(--accent1-color);
     cursor: pointer;
     font-weight: bold;
-    width: 100%;
-    /* Makes it span the bottom of the form */
 }
 
-/* Update this section in your rafting.css */
+/* ===========================
+   Employees Section
+=========================== */
 .employees {
     border: 1px solid var(--accent1-color);
-    /* Adds the full box border */
-    margin-top: 40px;
+    margin: 40px 0;
     padding: 20px;
-    /* Space inside the border */
     text-align: center;
 }
 
-/* Ensure the H2 inside doesn't have its own background color 
-   if you want it to look exactly like the wireframe */
 .employees h2 {
     background-color: transparent;
     color: var(--accent1-color);
     margin-bottom: 20px;
+}
+
+.employee-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.employee-grid figure {
+    flex: 1;
+}
+
+.employee-grid img {
+    width: 150px;
+    height: 150px;
+    background-color: var(--gray-placeholder);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--gray-placeholder);
+}
+
+.socialmedia {
+    display: flex;
+    gap: 12px;
+}
+
+.socialmedia img {
+    width: 40px;
 }
