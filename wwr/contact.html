@@ -23,21 +23,20 @@
     </header>
 
     <main>
-        <section class="company-address ">
+        <section class="company-address">
             <h1>Splashing Waters Company</h1>
-            <p> 123 Hage Road</p>
-            <P> Köln, 50653</P>
-            <P>+49 157 134 17818</P>
+            <p>123 Hage Road</p>
+            <p>Köln, 50653</p>
+            <p>+49 157 134 17818</p>
             <p>info@splashingwater.de</p>
-
         </section>
 
         <div class="contact-grid ">
             <section class="map">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3560.478498133644!2d7.
-                  141385988075907!3d50.87489207275704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1770472627684!5m2!1sen!2sde"
-                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3560.
+                386091361954!2d7.141567225874606!3d50.87610161662792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                1!5e0!3m2!1sen!2sde!4v1770473184348!5m2!1sen!2sde" width="400" height="300"
+                  style="border:0;" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
 
@@ -54,24 +53,21 @@
 
                     <fieldset>
                         <legend>Message Purpose</legend>
-                        <label><input type="radio" name="purpose" value="general"> General
-                            Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation
+                        <label><input type="radio" id="general" name="purpose" value="general">
+                            General Inquiry</label>
+                        <label><input type="radio" id="reservation" name="purpose"
+                              value="reservation"> Reservation
                             Question</label>
-                        <label><input type="radio" name="purpose" value="suggestion"> Website
+                        <label><input type="radio" id="suggestion" name="purpose"
+                              value="suggestion"> Website
                             Suggestion</label>
                     </fieldset>
 
-                    <div class="form-item">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Type here"></textarea>
-                    </div>
-
                     <label class="newsletter">
-                        <input type="checkbox" name="subscribe"> Please Subscribe me to the monthly
+                        <input type="checkbox" id="subscribe" name="subscribe"> Please Subscribe me
+                        to the monthly
                         newsletter
                     </label>
-
                     <button type="submit">Get in Touch!</button>
                 </form>
             </section>
