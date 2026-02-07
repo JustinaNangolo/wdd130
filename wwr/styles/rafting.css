@@ -5,7 +5,10 @@
     --primary-color: #055a05;
     --secondary-color: #f4f4f4;
     --accent1-color: #264653;
-    --accent2-color: black;
+    --accent2-color: #000000;
+    /* Standardized Black */
+    --white: #ffffff;
+    /* Standardized White */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -26,7 +29,7 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 /* ===========================
@@ -105,7 +108,7 @@ main {
     padding: 16px;
     text-align: center;
     background-color: var(--accent1-color);
-    color: white;
+    color: var(--white);
     opacity: 0.7;
     z-index: 2;
     font-family: var(--heading-font);
@@ -167,12 +170,10 @@ footer {
 
 .socialmedia a {
     text-decoration: none;
-    display: flex;
 }
 
 .socialmedia {
     display: flex;
-    /* This makes the links sit side-by-side */
     gap: 12px;
     /* This creates space between the icons */
 }
@@ -181,13 +182,12 @@ footer {
     width: 40px;
     height: auto;
     display: block;
-    gap: 12px;
 }
 
 .history {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 16px;
+    gap: 20px;
     align-items: center;
 
 }
