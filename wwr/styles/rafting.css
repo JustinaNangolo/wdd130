@@ -196,8 +196,13 @@ footer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 12px;
-    margin-top: 16px;
+    align-items: start;
     text-align: center;
+}
+
+.adventures figure {
+    margin: 0;
+    /* Removes default browser margins on figures */
 }
 
 .adventures h2 {
