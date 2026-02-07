@@ -8,6 +8,7 @@
     --accent2-color: #000000;
     /* Standardized Black */
     --white: #ffffff;
+    --hero-bg: rgba(255, 255, 255, 0.9);
     /* Standardized White */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -142,7 +143,7 @@ section {
 
 h2 {
     font-family: var(--heading-font);
-    color: white;
+    color: var(--white);
     text-align: center;
     background-color: var(--accent1-color);
 }
