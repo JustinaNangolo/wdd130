@@ -35,9 +35,12 @@ body {
 header {
     background-color: var(--secondary-color);
     color: var(--accent1-color);
-    width: 840px;
     margin: 0 auto;
     padding: 10px 16px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+
 }
 
 header img {
@@ -56,17 +59,24 @@ header nav a {
 
 header nav {
     text-align: left;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     display: flex;
-    gap: 16px;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
 }
 
 /* ===========================
    Main layout
 =========================== */
 main {
-    width: 840px;
     margin: 0 auto;
 }
 
@@ -146,11 +156,13 @@ p {
    Footer & Social Media
 =========================== */
 footer {
-    width: 840px;
+    display: flex;
     margin: 0 auto;
     text-align: left;
     padding: 20px 0;
     color: var(--accent2-color);
+    align-items: center;
+    justify-content: space-between;
 }
 
 .socialmedia a {
@@ -161,4 +173,42 @@ footer {
     width: 40px;
     height: auto;
     margin: 0 6px;
+    display: flex;
+    gap: 12px;
+}
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px;
+    align-items: center;
+
+}
+
+.history h2 {
+    grid-column: 1 /-1;
+    margin-bottom: 12px;
+
+}
+
+.adventures {
+    margin: 32px 16px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.adventures h2 {
+    grid-column: 1 /-1;
+}
+
+.adventures img {
+    width: 100%;
+}
+
+.adventures figcaption {
+    font-size: 0.9rem;
+    margin-top: 6px;
 }
