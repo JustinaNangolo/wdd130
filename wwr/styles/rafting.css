@@ -297,3 +297,46 @@ footer {
     gap: 20px;
     text-align: center;
 }
+
+/* Trips 
+
+/* Trips Page Specific Styles */
+.trip-comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--secondary-color);
+}
+
+.trip-comparison th,
+.trip-comparison td {
+    padding: 12px;
+    border: 1px solid var(--accent1-color);
+    text-align: left;
+}
+
+.trip-comparison th {
+    background-color: var(--accent1-color);
+    color: var(--white);
+}
+
+/* Trip Grid Layout */
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.trip-card {
+    border: 1px solid var(--gray-placeholder);
+    padding: 15px;
+    text-align: center;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
