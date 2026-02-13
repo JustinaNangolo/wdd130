@@ -246,3 +246,54 @@ footer {
 .socialmedia img {
     width: 40px;
 }
+
+/* Call to Action Buttons */
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent1-color);
+}
+
+/* Info Block with Overlap Effect */
+.info-block {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    background-color: #e2d1b5;
+    /* Light tan background from image */
+    padding: 60px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.info-block img {
+    width: 100%;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.info-block .content-box {
+    background-color: #5d6d5d;
+    /* Dark moss green from image */
+    color: var(--white);
+    padding: 40px;
+    margin-left: -80px;
+    /* This creates the overlap effect */
+    z-index: 2;
+}
+
+/* Adjusting Adventures grid for 3 items */
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
