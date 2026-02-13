@@ -340,3 +340,52 @@ footer {
     object-fit: cover;
     margin-bottom: 15px;
 }
+
+/* Ensure consistent figure styling for About and Home pages */
+.adventures figure,
+.trip-card {
+    border: 1px solid var(--gray-placeholder);
+    padding: 10px;
+    background-color: var(--white);
+    transition: transform 0.3s ease;
+}
+
+.adventures figure:hover,
+.trip-card:hover {
+    transform: scale(1.02);
+    /* Subtle hover effect for interaction */
+}
+
+/* Home Page: Overlapping Info Block Refinement */
+.info-block {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    /* Adjusted for better text fit */
+    background-color: #e2d1b5;
+    padding: 40px;
+    margin: 40px 0;
+    align-items: center;
+}
+
+/* About Page: History Section Grid */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+/* Trips Page: Table Accessibility */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--body-font);
+}
+
+th {
+    background-color: var(--accent1-color);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
