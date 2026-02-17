@@ -115,30 +115,24 @@ p {
     display: block;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    transform: none;
-    /* Important */
-    right: auto;
-    /* Important */
-    width: auto;
-    max-width: 60%;
-    padding: 16px 24px;
-    background-color: rgba(38, 70, 83, 0.85);
+.hero article h1 {
+    position: static; /* Removes the absolute positioning from before */
+    background-color: var(--accent-color); /* The dark bar seen in your screenshots */
     color: var(--white);
-    text-align: left;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: fit-content; /* Keeps the bar from stretching too far if desired */
 }
 
 .hero article {
     position: absolute;
-    bottom: 20px;
+    top: 100px; /* Adjust based on your background image */
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 30px;
+    display: block; /* Ensures heading stacks on top of text */
 }
 
 .hero article img {
