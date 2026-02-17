@@ -81,6 +81,13 @@ header nav a:hover {
     color: var(--accent-color);
 }
 
+/* 2. Apply the centering limit to the internal elements instead */
+header nav, footer p, footer .socialmedia, main {
+    max-width: 840px;
+    margin: 0 auto;
+    width: 95%; /* Provides a small safety margin on mobile */
+}
+
 /* ===============================
    TYPOGRAPHY
 ================================= */
