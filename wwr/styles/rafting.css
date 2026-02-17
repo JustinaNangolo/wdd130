@@ -149,7 +149,33 @@ p {
     margin-left: 15px;
 }
 
+.hero .hero-box {
+    position: absolute;
+    top: 55%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    background-color: var(--hero-article-overlay);
+    padding: 20px;
+    
+    /* Layout logic */
+    display: flex;
+    flex-direction: row; /* Horizontal alignment */
+    align-items: flex-start; /* PINS IMAGE TO THE TOP RIGHT */
+    gap: 20px; 
+}
 
+.hero .hero-box p {
+    flex: 1; 
+    text-align: left;
+    margin: 0;
+}
+
+.hero .hero-box img {
+    width: 150px;
+    height: auto;
+    /* No float needed with flexbox */
+}
 
 /* ===============================
    BUTTONS
