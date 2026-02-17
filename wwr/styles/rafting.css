@@ -46,6 +46,7 @@ header,
 footer {
     background-color: var(--secondary-color);
     padding: 20px 0;
+    width: 100%;
 }
 
 /* ===============================
