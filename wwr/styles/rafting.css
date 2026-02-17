@@ -374,3 +374,33 @@ footer a {
         gap: 15px;
     }
 }
+/* ===============================
+   NEWSLETTER SECTION
+================================= */
+.newsletter {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    margin: 40px 0;
+    text-align: center;
+    border: 1px solid var(--gray);
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Good for mobile responsiveness */
+}
+
+.newsletter .form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
