@@ -9,6 +9,10 @@
     --gray: #dddddd;
     --tan-bg: #e2d1b5;
     --moss-green: #5d6d5d;
+    /* Added variables for overlays to remove RGBA types */
+    --hero-h1-overlay: rgba(38, 70, 83, 0.85); 
+    --hero-article-overlay: rgba(255, 255, 255, 0.9);
+    --shadow-color: rgba(0, 0, 0, 0.2);
 
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -33,16 +37,13 @@ body {
 /* ===============================
    LAYOUT CONTAINERS
 ================================= */
-header,
-main,
-footer {
+header, main, footer {
     max-width: 840px;
     margin: 0 auto;
     width: 95%;
 }
 
-header,
-footer {
+header, footer {
     background-color: var(--secondary-color);
     padding: 20px 0;
     width: 100%;
@@ -83,9 +84,7 @@ header nav a:hover {
 /* ===============================
    TYPOGRAPHY
 ================================= */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: var(--heading-font);
 }
 
@@ -105,7 +104,7 @@ p {
    HERO SECTION
 ================================= */
 .hero {
-    position: relative;
+    position: relative; /* REQUIRED */
     margin-bottom: 60px;
 }
 
@@ -118,20 +117,20 @@ p {
     position: absolute; /* REQUIRED */
     top: 40px;
     left: 40px;
-    background-color: rgba(38, 70, 83, 0.85);
+    background-color: var(--hero-h1-overlay);
     color: var(--white);
     padding: 16px;
 }
 
 .hero article {
-    position: absolute;
-    top: 100px; /* Adjust based on your background image */
+    position: absolute; /* REQUIRED */
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--hero-article-overlay);
     padding: 30px;
-    display: block; /* Ensures heading stacks on top of text */
+    display: block;
 }
 
 .hero article img {
@@ -172,7 +171,7 @@ p {
 
 .info-block img {
     width: 100%;
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 8px 20px var(--shadow-color);
 }
 
 .info-block .content-box {
@@ -187,7 +186,7 @@ p {
 ================================= */
 .history {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Matching wireframe layout */
     gap: 20px;
     align-items: center;
     margin: 40px 0;
@@ -209,12 +208,9 @@ p {
 
 .adventures h2 {
     grid-column: 1 / -1;
-    text-align: center;
 }
 
 .adventures figure {
-    flex: 1;
-    min-width: 150px;
     border: 1px solid var(--gray);
     padding: 10px;
     text-align: center;
@@ -251,8 +247,7 @@ p {
     margin: 30px 0;
 }
 
-.trip-comparison th,
-.trip-comparison td {
+.trip-comparison th, .trip-comparison td {
     padding: 12px;
     border: 1px solid var(--accent-color);
     text-align: center;
@@ -279,28 +274,15 @@ form {
     gap: 15px;
 }
 
-label {
-    font-weight: bold;
-}
-
-input,
-textarea {
+input, textarea {
     padding: 10px;
     border: 1px solid var(--accent-color);
     width: 100%;
 }
 
-textarea {
-    min-height: 150px;
-}
-
 fieldset {
     border: 1px solid var(--accent-color);
     padding: 15px;
-}
-
-legend {
-    font-weight: bold;
 }
 
 .map iframe {
@@ -340,7 +322,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
 }
 
 footer a {
@@ -362,7 +343,6 @@ footer a {
    RESPONSIVE DESIGN
 ================================= */
 @media (max-width: 768px) {
-
     header {
         grid-template-columns: 1fr;
         text-align: center;
@@ -373,9 +353,7 @@ footer a {
         justify-content: center;
     }
 
-    .info-block,
-    .history,
-    .contact-grid {
+    .info-block, .history, .contact-grid {
         grid-template-columns: 1fr;
     }
 
