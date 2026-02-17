@@ -115,13 +115,13 @@ p {
     display: block;
 }
 
-.hero article h1 {
-    position: static; /* Removes the absolute positioning from before */
-    background-color: var(--accent-color); /* The dark bar seen in your screenshots */
+.hero h1 {
+    position: absolute; /* REQUIRED */
+    top: 40px;
+    left: 40px;
+    background-color: rgba(38, 70, 83, 0.85);
     color: var(--white);
-    padding: 10px;
-    margin-bottom: 15px;
-    width: fit-content; /* Keeps the bar from stretching too far if desired */
+    padding: 16px;
 }
 
 .hero article {
