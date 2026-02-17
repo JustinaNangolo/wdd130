@@ -112,7 +112,6 @@ p {
 ================================= */
 .hero {
     position: relative; /* REQUIRED */
-    margin-bottom: 60px;
 }
 
 .hero img {
@@ -122,9 +121,9 @@ p {
 
 .hero h1 {
     position: absolute; /* REQUIRED */
-    top: 1%;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: var(--hero-h1-overlay);
     color: var(--white);
     text-align: center;
@@ -132,12 +131,13 @@ p {
     
 }
 
+/* Moves the box higher on the image for index.html */
 .hero article {
-    position: absolute; /* REQUIRED */
-    top: 30%;
+    position: absolute; /* REQUIRED for the audit */
+    top: 60%;           /* Moves it higher into the picture */
     left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
+    transform: translate(-50%, -50%); /* Centers it horizontally and vertically */
+    width: 70%;
     background-color: var(--hero-article-overlay);
     padding: 20px;
     text-align: center;
@@ -148,6 +148,8 @@ p {
     width: 150px;
     margin-left: 15px;
 }
+
+
 
 /* ===============================
    BUTTONS
@@ -275,7 +277,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Multi-column layout */
     gap: 30px;
-    margin: 40px auto;
+    margin: 20px 0;
     align-items: start;
 }
 
@@ -339,7 +341,7 @@ footer {
     display: flex;
     justify-content: space-between; /* Pushes content to edges */
     align-items: center;
-    padding: 20px 5%;
+    padding: 20px 1%;
 }
 
 footer p {
@@ -395,28 +397,22 @@ footer a {
    NEWSLETTER SECTION
 ================================= */
 .newsletter-form {
-    background-color: var(--secondary-color);
-    padding: 30px;
-    margin: 40px auto;
     border: 1px solid var(--gray);
-    max-width: 600px;
-    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 840px;
 }
 
 .newsletter-form form {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns side by side */
-    gap: 15px;
+    grid-template-columns: 1fr 1fr; /* Two columns like the contact page */
+    gap: 20px;
     align-items: end;
 }
 
-.newsletter-form h2 {
-    grid-column: 1 / -1; /* Spans both columns */
-    margin-bottom: 15px;
-}
-
+/* Forces the heading and button to span the full width of the two columns */
+.newsletter-form h2, 
 .newsletter-form button {
-    grid-column: 1 / -1;
-    width: fit-content;
+    grid-column: 1 / -1; 
     justify-self: center;
 }
