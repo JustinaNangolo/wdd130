@@ -334,34 +334,54 @@ fieldset {
     object-fit: cover;
 }
 
+
 /* ===============================
-   FOOTER
+    FOOTER (FIXED ALIGNMENT)
+================================= */
+
+/* ===============================
+   FOOTER (FORCE SINGLE LINE)
 ================================= */
 footer {
     display: flex;
-    justify-content: space-between; /* Pushes content to edges */
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Container that matches the 840px site width */
+footer .footer-container {
+    display: flex;
+    justify-content: space-between; 
     align-items: center;
-    padding: 20px 1%;
+    max-width: 840px; /* Aligns with the rest of your site */
+    margin: 0 auto;
+    width: 95%; /* Safety margin for mobile */
 }
 
 footer p {
-    margin: 0; /* Prevents push-down */
+    margin: 0;
+    text-align: left;
+    white-space: nowrap; /* Forces copyright to stay on one line */
+    font-size: 0.9rem; /* Slightly smaller text to ensure it fits the 840px width */
 }
 
 footer a {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
+    white-space: nowrap; /* Forces link to stay on one line */
+    margin: 0 10px; /* Minimal margin to save horizontal space */
 }
 
 .socialmedia {
     display: flex;
-    gap: 15px;
-    justify-content: flex-end; /* Moves icons to right bottom corner */
+    gap: 15px; /* Reduced gap to save space */
+    justify-content: flex-end;
 }
 
 .socialmedia img {
-    width: 40px;
+    width: 40px; /* Smaller icons to ensure they fit in the 840px row */
     height: auto;
 }
 
