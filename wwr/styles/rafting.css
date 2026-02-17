@@ -122,22 +122,25 @@ p {
 
 .hero h1 {
     position: absolute; /* REQUIRED */
-    top: 40px;
-    left: 40px;
+    top: 1%;
+    left: 0px;
+    right: 0px;
     background-color: var(--hero-h1-overlay);
     color: var(--white);
-    padding: 16px;
+    text-align: center;
+    padding: 10px;
+    
 }
 
 .hero article {
     position: absolute; /* REQUIRED */
-    top: 100px;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
     background-color: var(--hero-article-overlay);
-    padding: 30px;
-    display: block;
+    padding: 20px;
+    text-align: center;
 }
 
 .hero article img {
@@ -270,9 +273,16 @@ p {
 ================================= */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Multi-column layout */
     gap: 30px;
-    margin: 40px 0;
+    margin: 40px auto;
+    align-items: start;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 form {
@@ -327,8 +337,13 @@ fieldset {
 ================================= */
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes content to edges */
     align-items: center;
+    padding: 20px 5%;
+}
+
+footer p {
+    margin: 0; /* Prevents push-down */
 }
 
 footer a {
@@ -339,11 +354,13 @@ footer a {
 
 .socialmedia {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    justify-content: flex-end; /* Moves icons to right bottom corner */
 }
 
 .socialmedia img {
     width: 40px;
+    height: auto;
 }
 
 /* ===============================
@@ -377,30 +394,29 @@ footer a {
 /* ===============================
    NEWSLETTER SECTION
 ================================= */
-.newsletter {
+.newsletter-form {
     background-color: var(--secondary-color);
-    padding: 40px;
-    margin: 40px 0;
-    text-align: center;
+    padding: 30px;
+    margin: 40px auto;
     border: 1px solid var(--gray);
+    max-width: 600px;
+    text-align: center;
 }
 
-.newsletter form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Good for mobile responsiveness */
+.newsletter-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns side by side */
+    gap: 15px;
+    align-items: end;
 }
 
-.newsletter .form-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.newsletter-form h2 {
+    grid-column: 1 / -1; /* Spans both columns */
+    margin-bottom: 15px;
 }
 
-.newsletter input {
-    padding: 10px;
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
+.newsletter-form button {
+    grid-column: 1 / -1;
+    width: fit-content;
+    justify-self: center;
 }
